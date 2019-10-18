@@ -1,0 +1,84 @@
+/*
+Eric Stafford
+Date: 10.2.19
+Most recent revision:10.15.19
+*/
+
+@charset "UTF-8";
+
+h1 {
+    font-size: 45px;
+    text-align: center;
+}
+div input {
+    width: 75%;
+    height: 5%;
+}
+h1, h3 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+p {
+    font-family: 'Crimson Text', serif;
+}
+h3 {
+    display: block;
+    font-size: 25px;
+}
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+input [type=text] {
+    border: 2px solid #ccc;
+    text-align: center;
+    width: 100%;
+    padding: 2x 5px;
+    margin: 10px 4px;
+    box-sizing: border-box;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+input [type=number] {
+    width: 75%;
+    padding: 5px 5px;
+    margin: 4px 4px;
+    box-sizing: border-box;
+  } 
+  input[type=text]:focus {
+    border: 3px solid #555;
+  }
+  input[type=submit] {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .btn-primary {
+    padding: 6px;
+    background: steelblue;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  .btn-primary:hover {
+      background: #ccc;
+  }
+div#container {
+    width: auto;
+    border: 2px solid lime;
+    margin: 2px;
+  } 
+div.col-auto {
+  box-sizing: border-box;
+  width: auto;
+  padding:5px 20px;
+  margin: 6px 6px;
+  border: 2px solid;
+  border-radius: 5px;
+  float: left;
+}
