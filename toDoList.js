@@ -14,9 +14,16 @@ function addBox()
 
 var a = document.getElementById("task").value;
 var b = document.getElementById("days").value;
-
+var color;
+if (b <= 3) {
+     color = "background-color: lightcoral; color: darkred;";
+}else if (b <= 7 && b >= 4){
+    color = "background-color: lemonchiffon; color: goldenrod;";
+} else {
+    color = "background-color: lightgrey;";
+}
   document.getElementById("printableArea").innerHTML=document.getElementById("printableArea").innerHTML+
-  "<div class='col-auto justify-content-around'><div class='row'>" + a + " " + " " + "<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div><div class='row'>" + b + " " + "day(s)</div></div>";
+  "<div class='col-auto justify-content-around' style='" + color + "'><div class='row'>" + a + " " + " " + "<button type='button' class='close' style='" + color + "' ata-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div><div class='row'>" + b + " " + "day(s)</div></div>";
 }
 
 /*
@@ -27,12 +34,12 @@ Remove button functionality
 
 Color and background color related to the amount of days
 // var color;
-// if (b <= 3) {
-//      color = bg.danger;
-// }if (b <= 7 && b > 4){
-//     color = bg.warning;
+// if (b < 3) {
+//      color = style="background-color: lightcoral; color: darkred;";
+// }if (b <= 7 && b >= 4){
+//     color = style="background-color: lemonchiffon; color: goldenrod;";
 // } else {
-//     color = bg.secondary
+//     color = style="background-color: lightgrey;";
 // }
 
 Task and Days should be Required
@@ -63,5 +70,4 @@ No Border needed
 // function isDateBeforeToday(date) {
 //     return new Date(date.toDateString()) < new Date(new Date().toDateString());
 // }
-
-// isDateBeforeToday(new Date(2016, 11, 16));
+*/
