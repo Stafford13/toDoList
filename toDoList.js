@@ -1,7 +1,7 @@
 /*
 Eric Stafford
 Date: 10.2.19
-Most recent revision:10.15.19
+Most recent revision:10.18.19
 */
 
 //add clickable x to boxes to hide block
@@ -23,7 +23,14 @@ if (b <= 3) {
     color = "background-color: lightgrey;";
 }
   document.getElementById("printableArea").innerHTML=document.getElementById("printableArea").innerHTML+
-  "<div class='col-auto justify-content-around' style='" + color + "'><div class='row'>" + a + " " + " " + "<button type='button' class='close' style='" + color + "' ata-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div><div class='row'>" + b + " " + "day(s)</div></div>";
+  "<div class='col-auto justify-content-around' style='" + color + "'><div class='row'>" + a + " " + " " + "<button type='button' class='close' onclick=removeBox() style='" + color + "' ata-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div><div class='row'>" + b + " " + "day(s)</div></div>";
+
+  $('#myForm')[0].reset();
+}
+
+function removeBox() {
+    var x = document.getElementsByClassName("col-auto justify-content-around");
+    x.style.display = "none";
 }
 
 /*
@@ -32,24 +39,12 @@ if (b <= 3) {
 Remove button functionality
 
 
-Color and background color related to the amount of days
-// var color;
-// if (b < 3) {
-//      color = style="background-color: lightcoral; color: darkred;";
-// }if (b <= 7 && b >= 4){
-//     color = style="background-color: lemonchiffon; color: goldenrod;";
-// } else {
-//     color = style="background-color: lightgrey;";
-// }
 
-Task and Days should be Required
+Task and Days should be Required!!
 
 
-After submit, Task and Days should be deleted
 
-
-No Border needed
-
+Spacing needs to be addressed when complete.
 
 /*
 

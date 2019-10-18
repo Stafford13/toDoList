@@ -2,7 +2,7 @@
 <!--
 Eric Stafford
 Date: 10.2.19
-Most recent revision: 10.15.19
+Most recent revision: 10.18.19
 Notes section below.
 -->
 <html lang="en">
@@ -30,8 +30,9 @@ Notes section below.
     </header>
     <div><h1>To Do List</h1></div>
         <div class="col-lg-11 offset-md-1"> 
+            <form id="myForm" class="form-group">
             <h3 class="col-md-2">Task</h3> <!--grey-->
-        <input type="text" id="task" required>
+        <input type="text required" id="task" required>
         </div>
         <div class="col-lg-11 offset-md-1">
             <h3 class="col-md-3">Days to Complete</h3> <!--grey-->
@@ -39,6 +40,7 @@ Notes section below.
         </div>
         <br>
         <button class="btn-primary offset-md-9" onclick="addBox()" type="submit">Submit</button>
+    </form>
         <br><br>
         <div id="printableArea">
             <div class="col-auto justify-content-around" style="background-color: lightgrey;"><div class="row">Travel to Antarctica<button type="button" class="close" onclick="removeBox()" data-dismiss="alert" aria-label="Close">
