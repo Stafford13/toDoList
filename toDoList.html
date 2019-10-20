@@ -2,7 +2,7 @@
 <!--
 Eric Stafford
 Date: 10.2.19
-Most recent revision: 10.18.19
+Most recent revision: 10.20.19
 Notes section below.
 -->
 <html lang="en">
@@ -29,24 +29,23 @@ Notes section below.
         </div>
     </header>
     <div><h1>To Do List</h1></div>
-        <div class="col-lg-11 offset-md-1"> 
+        <div class="col-lg-8 offset-lg-2"> 
             <form id="myForm" class="form-group">
-            <h3 class="col-md-2">Task</h3> <!--grey-->
-        <input type="text required" id="task" required>
+            <h3 class="col-md-2">Task</h3>
+        <input type="text" class="form-control" id="task" required>
         </div>
-        <div class="col-lg-11 offset-md-1">
-            <h3 class="col-md-3">Days to Complete</h3> <!--grey-->
-        <input type="number" name="days" id="days" min="0" required><!--Verification of date in the future-->
+        <div class="col-lg-8 offset-lg-2">
+            <h3 for="days">Days to Complete</h3>
+        <input type="number" class="form-control" id="days" min="0" name="days" required>
         </div>
         <br>
         <button class="btn-primary offset-md-9" onclick="addBox()" type="submit">Submit</button>
     </form>
         <br><br>
         <div id="printableArea">
-            <div class="col-auto justify-content-around" style="background-color: lightgrey;"><div class="row">Travel to Antarctica<button type="button" class="close" onclick="removeBox()" data-dismiss="alert" aria-label="Close">
+            <div class="col-auto justify-content-around alert alert-secondary alert-dismissible fade show" role="alert"><div class="col-auto"><div class="row">Travel to Antarctica</div><div class="row">21 Day(s)</div></div><button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
-                          </button></div><div class="row">21 day(s)</div></div>
-                        <!-- figure out color, and button-->
+                          </button></div>
           
         </div>
 <footer>
@@ -64,7 +63,5 @@ Notes section below.
 
 <!--
     Notes: 
-    style="background-color: lightcoral; color: darkred;" --- for 3 or less days
-    style="background-color: lemonchiffon; color: goldenrod;" --- for 4 to 7 days
-    style="background-color: lightgrey;" --- for everything else
+    
 -->

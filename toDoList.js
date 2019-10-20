@@ -1,12 +1,11 @@
 /*
 Eric Stafford
 Date: 10.2.19
-Most recent revision:10.18.19
+Most recent revision:10.20.19
 */
 
-//add clickable x to boxes to hide block
-
 //writeline through text when clicked on
+
 
 function addBox()
 {
@@ -15,36 +14,28 @@ function addBox()
 var a = document.getElementById("task").value;
 var b = document.getElementById("days").value;
 var color;
-if (b <= 3) {
-     color = "background-color: lightcoral; color: darkred;";
+if (b <= 3 && b >=0) {
+     color = "alert-danger";
 }else if (b <= 7 && b >= 4){
-    color = "background-color: lemonchiffon; color: goldenrod;";
+    color = "alert-warning";
 } else {
-    color = "background-color: lightgrey;";
+    color = "alert-secondary";
 }
   document.getElementById("printableArea").innerHTML=document.getElementById("printableArea").innerHTML+
-  "<div class='col-auto justify-content-around' style='" + color + "'><div class='row'>" + a + " " + " " + "<button type='button' class='close' onclick=removeBox() style='" + color + "' ata-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div><div class='row'>" + b + " " + "day(s)</div></div>";
+  "<div class='col-auto justify-content-around alert " + color + " alert-dismissible fade show'><div class='col-auto'><div class='row'>" + a + "</div><div class='row'>" + b + " Day(s)</div></div><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
 
   $('#myForm')[0].reset();
 }
 
-function removeBox() {
-    var x = document.getElementsByClassName("col-auto justify-content-around");
-    x.style.display = "none";
-}
 
 /*
-
-
-Remove button functionality
-
 
 
 Task and Days should be Required!!
 
 
 
-Spacing needs to be addressed when complete.
+Submit button needs to be responsive to different sizes.
 
 /*
 
