@@ -6,6 +6,18 @@ Most recent revision:10.20.19
 
 //writeline through text when clicked on
 
+function check()
+{
+    var task = document.getElementById("task").value;
+    var days = document.getElementById("days").value;
+    
+    if (task == "" || days == "") {
+        alert("Task and Days to Complete need to be filled out. Please retry");
+        return false;
+    } else { addBox();
+        return true;
+        }
+}
 
 function addBox()
 {
